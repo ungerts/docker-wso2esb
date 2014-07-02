@@ -1,9 +1,5 @@
-FROM ubuntu
+FROM dockerfile/java
 MAINTAINER Tobias Unger
-
-RUN apt-get update
-
-RUN apt-get install -y openjdk-7-jdk unzip
 
 RUN adduser --disabled-password --gecos "" wso2
 
