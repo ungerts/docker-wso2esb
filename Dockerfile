@@ -10,3 +10,7 @@ USER wso2
 RUN wget http://mirrors.ae-online.de/apache/tomcat/tomcat-7/v7.0.54/bin/apache-tomcat-7.0.54.zip
 
 RUN unzip apache-tomcat-7.0.54.zip
+
+WORKDIR /home/wso2/apache-tomcat-7.0.54/bin
+
+RUN chown 755 *.sh
