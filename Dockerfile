@@ -13,4 +13,8 @@ RUN unzip apache-tomcat-7.0.54.zip
 
 WORKDIR /home/wso2/apache-tomcat-7.0.54/bin
 
-RUN chown 755 *.sh
+RUN chmod 755 *.sh
+
+EXPOSE 8080
+
+CMD ["/home/wso2/apache-tomcat-7.0.54/bin/catalina.sh", "run"]
