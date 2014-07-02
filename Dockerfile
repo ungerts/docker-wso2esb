@@ -9,4 +9,6 @@ RUN adduser --disabled-password --gecos "" wso2
 
 WORKDIR /home/wso2
 
-CMD su -l wso2
+USER wso2
+
+CMD /bin/bash
