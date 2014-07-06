@@ -7,14 +7,14 @@ WORKDIR /home/wso2
 
 USER wso2
 
-RUN wget http://mirrors.ae-online.de/apache/tomcat/tomcat-7/v7.0.54/bin/apache-tomcat-7.0.54.zip
+RUN wget https://s3-eu-west-1.amazonaws.com/wso2-docker/wso2esb-4.8.1.zip
 
-RUN unzip apache-tomcat-7.0.54.zip
+RUN unzip wso2esb-4.8.1.zip
 
-WORKDIR /home/wso2/apache-tomcat-7.0.54/bin
+WORKDIR /home/wso2/wso2esb-4.8.1/bin
 
 RUN chmod 755 *.sh
 
-EXPOSE 8080
+EXPOSE 9443
 
-CMD ["/home/wso2/apache-tomcat-7.0.54/bin/catalina.sh", "run"]
+CMD ["/home/wso2/wso2esb-4.8.1/bin/wso2server.sh"]
