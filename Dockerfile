@@ -17,6 +17,12 @@ RUN chmod 755 *.sh
 
 EXPOSE 9443
 
+EXPOSE 9763
+
+EXPOSE 8243
+
+EXPOSE 8280
+
 ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
 
 CMD ["/home/wso2/wso2esb-4.8.1/bin/wso2server.sh"]
